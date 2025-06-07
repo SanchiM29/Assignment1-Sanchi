@@ -10,6 +10,13 @@ I’ve solved these in Python (you can change the language if needed).
 # Sample Problem Format
 
 # Problem: Tuples
-# Link: https://www.hackerrank.com/challenges/Tuples
+# Link: https://www.hackerrank.com/challenges/python-arithmetic-operators/problem?isFullScreen=true
 # Language: Python 3
-code
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    
+    print(int(a+b))
+    print(int(a-b))
+    print(int(a*b))
+
