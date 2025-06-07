@@ -1,0 +1,19 @@
+# Problem: Iterables-and-Iterators
+# Link: https://www.hackerrank.com/challenges/iterables-and-iterators/problem?isFullScreen=true
+# Language: Python 3
+from math import comb
+
+N = int(input())
+letters = input().split()
+K = int(input())
+
+a_count = letters.count('a')
+not_a_count = N - a_count
+
+total = comb(N, K)
+if not_a_count < K:
+    print("1.0000")
+else:
+    no_a_combos = comb(not_a_count, K)
+    prob = 1 - no_a_combos / total
+    print(f"{prob:.4f}")
