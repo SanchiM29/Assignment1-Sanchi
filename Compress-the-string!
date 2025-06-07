@@ -1,0 +1,11 @@
+# Problem: Compress the String!
+# Link: https://www.hackerrank.com/challenges/compress-the-string/problem?isFullScreen=true
+# Language: Python 3
+from itertools import groupby
+def compress_string_tuple_format(s):
+    result = [(len(list(group)), int(key)) for key, group in groupby(s)]
+    return ' '.join(f"({count}, {char})" for count, char in result)
+
+if __name__ == "__main__":
+    input_string = input()
+    print(compress_string_tuple_format(input_string))
